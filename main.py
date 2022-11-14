@@ -33,13 +33,13 @@ while True:
     
         
     
-    if(time.time()-start>z*60):
+    if(time.time()-start>z*60): # Update time, 'z' is an integer. z*60 = 60s ,120s ,180s... To change the update time, change the numeric multiplier of 'z' (ie,60)
         
         
         z=z+1
         if(t>c):
             message = client.messages.create(
-            body="Attention, there's someone detected in the vicinity of your security cameras. Updated Every minute",
+            body="Attention, there's someone detected in the vicinity of your security cameras. Updated Every minute", # Alert Message
             from_= authKeys.twilio_num,
             to= authKeys.target_num
         )
